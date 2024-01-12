@@ -1,40 +1,76 @@
-/* General CSS prior to signing in - Dark Mode */
-
-body{
-  background-color: black;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
+.sidebar {
+  background-color: #111;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+}
 
-.welcome-message{
+.logo {
+  padding: 10px;
   color: white;
-  font-family: 'Poppins';
-  font-size: 100px;
-  line-height: 90px;
   text-align: center;
-  margin-top: 75px;
+  font-size: 24px;
 }
 
-.subtitle{
-  color: grey;
-  font-family: 'Poppins';
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.tutorial{
+.nav .nav-link {
   display: block;
-  width: 300px;
-  height: 100px;
-  border-radius: 50px;
-  font-size: 26px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #ddd;
+  padding: 16px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
 }
 
-.tutorial:hover{
-  background-color: #00000000;
-  color: #fff;
-  cursor: pointer;
+.nav .nav-link:hover {
+  background-color: #575757;
+  color: white;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  height: 200%; /* for demonstration purposes */
+}
+
+.content h1, .content h2 {
+  color: white;
+}
+
+/* When the user scrolls down, shrink the sidebar */
+.sidebar.scrolled {
+  transform: translateX(-100px);
+}
+
+/* Adjust the content margin when sidebar is collapsed */
+.content.scrolled {
+  margin-left: 100px;
 }

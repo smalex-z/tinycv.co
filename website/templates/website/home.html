@@ -5,50 +5,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Sun - Portfolio</title>
+  <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
+  <link rel="stylesheet" href={% static "styles/pre-general.css" %}>
 
-  <title>SureFashion</title>
-  
-  <link href={% static "import_styles/poppins_font.css" %} rel="stylesheet" />
-    <link href={% static "import_styles/roboto_font.css" %} rel="stylesheet" />
-    <link href={% static "import_styles/source_sans_font.css" %} rel="stylesheet" />
 
-    <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
-    <link rel="stylesheet" href={% static "styles/pre-general.css" %}>
-    <link rel="stylesheet" href={% static "styles/pre-header.css" %}>
+  <script src={% static "import_styles/bootstrap.bundle.min.js" %}></script>
+  <script src={% static "import_styles/dev_jquery-3.7.1.js" %}></script>
 
-    <script src={% static "import_styles/bootstrap.bundle.min.js" %}></script>
-    <script src={% static "import_styles/dev_jquery-3.7.1.js" %}></script>
+
 </head>
-
 <body>
-  <div class="navbar header">
-    <div class="left-section">
-      <a href="{% url 'home' %}">
-        <img src="{% static 'images/logo.png' %}" alt="logo" />
-      </a>
+  <div class="sidebar">
+    <div class="sidebar-content">
+        <div class="logo">UCLA</div>
+        <nav class="nav">
+          <div class="progress-bar">
+            <span class="circle"></span>
+            <a href="#summary" class="nav-link">Summary</a>
+            <span class="circle"></span>
+            <a href="#resume" class="nav-link">Resume</a>
+            <span class="circle"></span>
+            <a href="#projects" class="nav-link">Projects</a>
+            <span class="circle"></span>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </nav>
+        
     </div>
-    <div class="middle-section"></div>
-    <div class="right-section">
-      <button onclick="window.location.href='';" class="login-button">Login</button>
-    </div>
-  </div>
-  <div class="header-spacer"></div>
-  <div class="container text-center text-white">
-    <p class="welcome-message">Fresh Outfits<br />One Click Away</p>
-    <p class="subtitle">
-      1. Upload Items from your Wardrobe - 2. Generate new outfits with one
-      click - 3. Or build your own!
-    </p>
-    <button type="button" onclick="window.location.href='';" class="btn btn-light tutorial">Get Started</button>
-    <img src="{% static 'images/fashion.png' %}" alt="Buck" />
-  </div>
-  <div class="spacer">
-    <p class="spacer-test">RAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</p>
-    <img src="{% static 'images/buck.png' %}" alt="Buck" />
-    <p class="spacer-test">RAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</p>
-  </div>
+</div>
+
+<div class="content">
+    <section id="summary">
+        <h1>Kevin Sun</h1>
+        <p>Trying to get internship please</p>
+    </section>
+    <section id="resume">
+        <h2>Resume</h2>
+        <!-- Resume content goes here -->
+        <button>Preview</button>
+        <button>Download</button>
+    </section>
+    <!-- More sections will go here -->
+</div>
+
+<script src={% static "javascript/home.js" %}></script>
 </body>
+</html>
 
 </html>
