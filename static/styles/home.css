@@ -1,0 +1,96 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+}
+
+.sidebar {
+  background-color: #121212;
+  width: 400px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+.nav .nav-link {
+  display: block;
+  color: #ddd;
+  padding: 16px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav .nav-link:hover {
+  background-color: #575757;
+  color: white;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-left: 400px;
+  color: white;
+  height: 200%; /* for demonstration purposes */
+  transition: margin-left 0.3s ease-in-out;
+
+}
+
+.content h1, .content h2 {
+  color: white;
+}
+
+.summary-div{
+  height: 1080px;
+}
+
+.resume-div{
+  height: 500px;
+  background-color: #383838;
+}
+
+.projects-div{
+  height: 500px;
+  background-color: #000000;
+}
+
+.contact-div{
+  height: 500px;
+  background-color: #222222;
+}
+
+/* When the user scrolls down, shrink the sidebar */
+.sidebar.scrolled {
+  transform: translateX(-200px);
+}
+
+/* Adjust the content margin when sidebar is collapsed */
+.content.scrolled {
+  margin-left: 200px;
+}
