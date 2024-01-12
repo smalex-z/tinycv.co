@@ -67,21 +67,21 @@ body, html {
 }
 
 .summary-div{
-  height: 1080px;
+  height: 100vh;
 }
 
 .resume-div{
-  height: 500px;
+  height: 100vh;
   background-color: #383838;
 }
 
 .projects-div{
-  height: 500px;
+  height: 100vh;
   background-color: #000000;
 }
 
 .contact-div{
-  height: 500px;
+  height: 100vh;
   background-color: #222222;
 }
 
