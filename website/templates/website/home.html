@@ -10,7 +10,7 @@
   <title>Kevin Sun - Portfolio</title>
   <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
   <link rel="stylesheet" href={% static "styles/home.css" %}>
-
+  <link rel="stylesheet" href={% static "styles/projects.css" %}>
 
   <script src={% static "import_styles/bootstrap.bundle.min.js" %}></script>
   <script src={% static "import_styles/dev_jquery-3.7.1.js" %}></script>
@@ -54,10 +54,7 @@
       </div>
     </section>
     <section id="projects">
-      <div class="projects-div"> <!--Need CSS!-->
-        <h1>Projects</h1>
-        <p>Soemthing about projects here!</p>
-      </div>
+      {% include 'website/projects.html' %}
     </section>
     <section id="contact">
       <div class="contact-div"> <!--Need CSS!-->

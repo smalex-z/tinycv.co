@@ -1,0 +1,33 @@
+/* projects.css */
+
+.projects-div {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start; 
+    
+  }
+  
+  .project-box {
+    margin-top: 150px;
+    flex: 0 1 calc(33.33% - 20px);
+  }
+  
+  .project-box p {
+    font-weight: bold;
+    margin-left: -15px;
+  }
+  
+  .project-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border: 1px solid #dddddd; /* Add a subtle border around images */
+    border-radius: 8px; /* Add rounded corners to images */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+    margin-left: -20px;
+  }
+  
+  .project-box img:hover {
+    transform: scale(1.1); /* Enlarge the image slightly on hover */
+  }
+  
