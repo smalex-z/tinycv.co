@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var progressCircles = document.querySelectorAll('.circle');
     var sections = ['summary', 'resume', 'projects', 'contact']; // Add section IDs here
 
+    var scrollTimeout; // Declare the scrollTimeout variable here
+
+
     function toggleSidebar() {
         console.log('toggleSidebar function called');
         console.log(content.scrollTop);
@@ -33,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     content.addEventListener('scroll', function () {
+        clearTimeout(scrollTimeout);
 
         // Set a new timeout to delay the actions by 1000 milliseconds (1 second)
         scrollTimeout = setTimeout(function () {
