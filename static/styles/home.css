@@ -61,6 +61,8 @@ body, html {
   color: white;
   height: 200%; /* for demonstration purposes */
   transition: margin-left 0.3s ease-in-out;
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping on the body */
+  overflow-y: scroll; /* Hide scrollbars */
 
 }
 
@@ -74,6 +76,8 @@ body, html {
   height: 100vh;
   text-align: right;
   padding: 20px;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
 }
 
 .socials{
@@ -98,16 +102,22 @@ body, html {
 .resume-div{
   height: 100vh;
   background-color: #383838;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
 }
 
 .projects-div{
   height: 100vh;
   background-color: #000000;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
 }
 
 .contact-div{
   height: 100vh;
   background-color: #222222;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
 }
 
 /* When the user scrolls down, shrink the sidebar */

@@ -5,13 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var sections = ['summary', 'resume', 'projects', 'contact']; // Add section IDs here
 
     function toggleSidebar() {
-        if (window.scrollY > 50) {
-            sidebar?.classList.add('scrolled');
-            content?.classList.add('scrolled');
+        console.log('toggleSidebar function called');
+        console.log(content.scrollTop);
+
+        if (content.scrollTop > 50) {
+            sidebar.classList.add('scrolled');
+            content.classList.add('scrolled');
         } else {
-            sidebar?.classList.remove('scrolled');
-            content?.classList.remove('scrolled');
+            sidebar.classList.remove('scrolled');
+            content.classList.remove('scrolled');
         }
+
     }
 
     function highlightProgress() {
@@ -28,8 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    window.addEventListener('scroll', function () {
-        toggleSidebar();
-        highlightProgress();
+    content.addEventListener('scroll', function () {
+
+        // Set a new timeout to delay the actions by 1000 milliseconds (1 second)
+        scrollTimeout = setTimeout(function () {
+            toggleSidebar();
+            highlightProgress();
+        }, 1000);
     });
 });
