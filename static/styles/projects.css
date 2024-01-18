@@ -21,13 +21,14 @@
     max-width: 100%;
     height: auto;
     max-height: 300px;
-    border: 1px solid #dddddd; /* Add a subtle border around images */
-    border-radius: 8px; /* Add rounded corners to images */
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+    border: 1px solid #dddddd; /*  around images */
+    border-radius: 8px; /* rounded corners to images */
+    transition: transform 0.3s ease-in-out; /* transition effect */
     margin-left: -20px;
   }
   
   .project-box img:hover {
-    transform: scale(1.1); /* Enlarge the image slightly on hover */
+    transform: scale(1.1); /* Enlarge image on hover */
+    
   }
   
