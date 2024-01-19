@@ -23,12 +23,10 @@
     font-size: 20px;
     margin-left: 140px;
     margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
   }
 
   .btn:hover {
     color: lightskyblue;
-    transform: scale(1.1);
   }
   
   .project-box img {
