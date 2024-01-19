@@ -1,32 +1,47 @@
 /* projects.css */
 
-.projects-div {
+  .projects-div {
     margin: 20px;
     display: flex;
     justify-content: flex-start; 
-    
+  }
+
+  .projects-div h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
   }
   
   .project-box {
-    margin-top: 150px;
+    margin-top: 200px;
     flex: 0 1 calc(33.33% - 20px);
   }
   
-  .project-box p {
+  .btn {
+    color: white;
     font-weight: bold;
-    margin-left: -15px;
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    margin-left: 140px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    color: lightskyblue;
+    transform: scale(1.1);
   }
   
   .project-box img {
     max-width: 100%;
     height: auto;
     max-height: 300px;
-    border: 1px solid #dddddd; /*  around images */
-    border-radius: 8px; /* rounded corners to images */
+    border: 2.5px solid #dddddd; /*  around images */
+    border-radius: 15px; /* rounded corners to images */
     transition: transform 0.3s ease-in-out; /* transition effect */
-    margin-left: -20px;
+    margin-left: 125px;
   }
   
   .project-box img:hover {
     transform: scale(1.1); /* Enlarge image on hover */
+    cursor: pointer;
   }
