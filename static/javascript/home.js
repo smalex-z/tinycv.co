@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
     content.addEventListener('scroll', function () {
         clearTimeout(scrollTimeout);
 
-        // Set a new timeout to delay the actions by 1000 milliseconds (1 second)
+        // Set a new timeout to delay the actions by 10 milliseconds (1 second)
         scrollTimeout = setTimeout(function () {
             toggleSidebar();
             highlightProgress();
-        }, 1000);
+        }, 100);
     });
 });
