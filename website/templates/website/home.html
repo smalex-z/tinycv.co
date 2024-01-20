@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Sun - Portfolio</title>
+  <title>ThreePointFive</title>
   <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
   <link rel="stylesheet" href={% static "styles/home.css" %}>
 
@@ -40,13 +40,19 @@
 
   <div class="content">
     <section id="summary">
-      <div class="summary-div"> <!--Need CSS!-->
-        <h1>Kevin Sun</h1>
-        <p>Trying to get internship please</p>
+      <div class="summary-div">
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/alexzheng04/" target="_blank"><img src={% static "images/linkedin.png" %} alt="LinkedIn"></a>
+          <a href="https://github.com/smalex-z" target="_blank"><img src={% static "images/github.png" %} alt="Github"></a>
+          <a href="mailto:alexzheng2004@gmail.com" target="_blank"><img src={% static "images/mail.png" %} alt="Mail"></a>
+
+        </div>
+        <p class="name">Kevin Sun</p>
+        <h1>you got NO BALLS</h1>
       </div>
     </section>
     <section id="resume">
-      <div class="resume-div"> <!--Need CSS!-->
+      <div class="resume-div">
         <h2>Resume</h2>
         <!-- Resume content goes here -->
         <button>Preview</button>
@@ -54,13 +60,13 @@
       </div>
     </section>
     <section id="projects">
-      <div class="projects-div"> <!--Need CSS!-->
+      <div class="projects-div">
         <h1>Projects</h1>
         <p>Soemthing about projects here!</p>
       </div>
     </section>
     <section id="contact">
-      <div class="contact-div"> <!--Need CSS!-->
+      <div class="contact-div">
         <h2>Contact me!</h2>
         <!-- Resume content goes here -->
         <button>Press This!</button>
