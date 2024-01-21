@@ -70,9 +70,37 @@ body, html {
   height: 100vh;
 }
 
-.resume-div{
-  height: 100vh;
+.resume-div {
+  height: 92.5vh;
   background-color: #383838;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content at the top */
+}
+
+.resumeTitle-div {
+  height: 7.5vh;
+  background-color: #383838;
+  text-align: left;
+}
+
+.blurred-image-container {
+  height: 90%;
+  width: 70%; /* Adjust the width as needed */
+  margin: 0 10%; /* Adjust the margins */
+  overflow: hidden;
+}
+
+.blurred-image {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  filter: blur(2px);
+}
+
+.button-container {
+  margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .projects-div{
