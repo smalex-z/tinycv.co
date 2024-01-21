@@ -1,0 +1,215 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.sidebar {
+  background-color: #121212;
+  width: 400px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  transition: transform 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+.nav {
+  flex-grow: 1; /* Allow the nav to take up the remaining space in the sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1; /* Allow the nav to take up the remaining space in the sidebar */
+  display: flex;
+  flex-direction: column;
+  margin: 0; /* Remove default margin to avoid spacing issues */
+}
+
+.nav li {
+  flex-grow: 1; /* Allow the nav to take up the remaining space in the sidebar */
+  display: flex;
+  flex-direction: column;
+}
+
+.nav li a{
+  flex-grow: 1; /* Allow the nav to take up the remaining space in the sidebar */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; 
+}
+
+.nav-button {
+  width: 100%; /* Each button spans the entire width of the parent <li> */
+  background-color: #121212; /* Choose a color that matches the sidebar background */
+  color: white;
+  border: none;
+  flex-grow: 1; /* Allow the nav to take up the remaining space in the sidebar */
+  justify-content: center;
+  font-size: large;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Add smooth transition */
+  align-items: center; /* Center the content vertically */
+}
+
+.nav-button:hover {
+  background-color: #222222; /* Change the background color on hover */
+}
+
+.nav-button.active {
+  background-color: #424242; /* Change to the desired active button color */
+  color: white; /* You can also adjust the text color */
+}
+
+
+.content {
+  margin-left: 400px;
+  color: white;
+  height: 200%; /* for demonstration purposes */
+  transition: margin-left 0.3s ease-in-out ;
+  
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping on the body */
+  overflow-y: scroll; /* Hide scrollbars */
+  scroll-behavior: smooth;
+}
+
+.content h1, .content h2 {
+  color: white;
+}
+
+.summary-div{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: right;
+  padding: 20px;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
+}
+
+.socials{
+  flex-direction: row;
+  display: flex;  
+  justify-content: center;
+}
+
+.socials a, .socials img {
+  height: 30px;
+  width: 30px;
+  margin: 15px;
+}
+
+.name{
+  font-size: 180px;
+  font-weight: bold;
+  margin-top: 20vh;
+  margin-bottom: -30px;
+}
+
+.resume-div {
+  height: 100vh;
+  background-color: #383838;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content at the top */
+}
+
+.resumeTitle-div {
+  height: 7.5vh;
+  background-color: #383838;
+  text-align: left;
+  width: 100%;
+  margin: 10px 0 5px 0;
+  padding: 0 10px ;
+}
+
+.blurred-image-container {
+  height: 80%;
+  width: 70%; /* Adjust the width as needed */
+  margin: 0 10%; /* Adjust the margins */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blurred-image {
+  max-width: 100%;
+  height: auto;
+  filter: blur(2px);
+}
+
+.button-container button{
+  margin: 25px 10px 0 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow,transform;
+  background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+  padding: 0 32px;
+  border-radius: 6px;
+  color: #fff;
+  height: 48px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease,transform 0.15s ease;
+  width: 150px;
+}
+.button-container button:hover{
+  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+  transform: translateY(-2px);
+}
+
+.button-container button:active{
+  box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+  transform: translateY(-2px);
+}
+
+
+.projects-div{
+  height: 100vh;
+  background-color: #000000;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
+}
+
+.contact-div{
+  height: 100vh;
+  background-color: #222222;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
+
+}
+
+/* When the user scrolls down, shrink the sidebar */
+.sidebar.scrolled {
+  transform: translateX(-200px);
+  padding-left: 200px;
+}
+
+/* Adjust the content margin when sidebar is collapsed */
+.content.scrolled {
+  margin-left: 200px;
+}
