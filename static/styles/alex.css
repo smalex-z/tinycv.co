@@ -1,3 +1,4 @@
+
 body, html {
   margin: 0;
   padding: 0;
@@ -91,11 +92,6 @@ body, html {
   overflow-y: scroll; /* Hide scrollbars */
   scroll-behavior: smooth;
 }
-
-.content h1, .content h2 {
-  color: white;
-}
-
 .summary-div{
   display: flex;
   flex-direction: column;

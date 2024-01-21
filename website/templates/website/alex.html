@@ -1,3 +1,4 @@
+
 <!--This is our home page. This is pre-sign in, welcome page-->
 <!--TODO: Update this page pls-->
 {% load static %}
@@ -9,6 +10,8 @@
   <title>ThreePointFive</title>
   <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'styles/alex.css' %}">
+  <link rel="stylesheet" href={% static "styles/projects.css" %}>
+
   <script src="{% static 'import_styles/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'import_styles/dev_jquery-3.7.1.js' %}"></script>
 </head>
@@ -49,17 +52,71 @@
         </div>
         <div class="button-container">
           <button data-bs-toggle="modal" data-bs-target="#resumeModal">Preview</button>
-          <a href="{% static 'images/az.png' %}" download="myresume.png">
+          <a href="{% static 'images/az.png' %}" download="az.png">
             <button>Download</button>
           </a>
         </div>
       </div>
     </section>
     <section id="projects">
-      <div class="projects-div">
-        <h1>Projects</h1>
-        <p>Something about projects here!</p>
+      
+<div class="projects-div">
+  <h1 class="header">Projects</h1>
+  <div class="row border-box custom-row">
+    <div class="card">
+      <div class="project-box project1">
+        <a target="_blank" href="{% url 'project' %}">
+          <h2>tinyCV.co</h2>
+          <div class="project-image">
+            <img src="../static/images/tinyCV.png" alt="Project 1">
+          </div>
+          <div class="project-details">
+            AWS hosted site that provides a simple domain name for users to create and share their own personal websites on their resumes.
+          </div>
+        </a>
       </div>
+    </div>
+    <div class="card">
+      <div class="project-box project1">
+        <a target="_blank" href="{% url 'project' %}">
+          <h2>SureFasion</h2>
+          <div class="project-image">
+            <img src="../static/images/comingsoon.png" alt="Project 1">
+          </div>
+          <div class="project-details">
+            Responsive Django web-application using HTML/CSS, Bootstrap, and JavaScript designed to allow users to curate wardrobes, explore outfits, and experiment with styles.
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="project-box project1">
+        <a target="_blank" href="{% url 'project' %}">
+          <h2>FitTogether</h2>
+          <div class="project-image">
+            <img src="../static/images/comingsoon.png" alt="Project 1">
+          </div>
+          <div class="project-details">
+            Cross-platform fitness app utilizing the spaCy machine learning model to match like-minded individuals based on their fitness preferences and foster inclusivity.
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="project-box project1">
+        <a target="_blank" href="{% url 'project' %}">
+          <h2>Cooking 101</h2>
+          <div class="project-image">
+            <img src="../static/images/comingsoon.png" alt="Project 1">
+          </div>
+          <div class="project-details">
+            Coming soon!
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
     <section id="contact">
       <div class="contact-div">
@@ -83,7 +140,7 @@
           <div class="modal-body">
              <!-- Add your resume content here -->
              <div class="modal-body">
-              <img src="{% static 'images/Dummy.png' %}" alt="Resume Image" class="img-fluid">
+              <img src="{% static 'images/az.png' %}" alt="Resume Image" class="img-fluid">
            </div>
           </div>
           <div class="modal-footer">
