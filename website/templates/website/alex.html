@@ -41,10 +41,18 @@
     </section>
     <section id="resume">
       <div class="resume-div">
-        <h2>Resume</h2>
-        <!-- Resume content goes here -->
-        <button>Preview</button>
-        <button>Download</button>
+        <div class="resumeTitle-div">
+          <h2>Resume</h2>
+        </div>
+        <div class="blurred-image-container">
+          <img src="{% static 'images/az.png' %}" alt="Blurred Resume" class="blurred-image">
+        </div>
+        <div class="button-container">
+          <button data-bs-toggle="modal" data-bs-target="#resumeModal">Preview</button>
+          <a href="{% static 'images/az.png' %}" download="myresume.png">
+            <button>Download</button>
+          </a>
+        </div>
       </div>
     </section>
     <section id="projects">
@@ -64,5 +72,26 @@
   </div>
 
   <script src="{% static 'javascript/home.js' %}"></script>
+
+  <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="resumeModalLabel">Resume Preview</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <!-- Add your resume content here -->
+             <div class="modal-body">
+              <img src="{% static 'images/Dummy.png' %}" alt="Resume Image" class="img-fluid">
+           </div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+             <!-- Add any additional buttons or functionality here -->
+          </div>
+       </div>
+    </div>
+ </div>
 </body>
 </html>
