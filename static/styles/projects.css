@@ -1,27 +1,25 @@
 .projects-div {
   margin: 20px;
-  display: flex;
-  justify-content: flex-start; 
 }
 
 .projects-div h1 {
   font-family: 'Pacifico', cursive;
   font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .project-box {
-  margin-top: 200px;
-  flex: 0 1 calc(33.33% - 20px);
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .btn {
   color: white;
   font-weight: bold;
   font-family: 'EB Garamond', serif;
-  font-size: 20px;
-  margin-left: 140px;
+  font-size: 30px;
   margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out;
+  text-decoration: underline;
 }
 
 .btn:hover {
@@ -29,18 +27,42 @@
   transform: scale(1.1);
 }
 
+.project1,
+.project2 {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.project1 {
+  margin-top: 50px;
+}
+
+.project2 {
+  margin-top: 400px;
+}
+
+.project-details {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.project-details p {
+  color: white;
+  margin-top: 10px;
+}
+
 .project-box img {
   max-width: 100%;
   height: auto;
-  max-height: 300px;
-  border: 2.5px solid #dddddd; /*  around images */
-  border-radius: 15px; /* rounded corners to images */
-  transition: transform 0.3s ease-in-out; /* transition effect */
-  margin-left: 125px;
+  max-height: 250px;
+  border: 2.5px solid #dddddd;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .project-box img:hover {
-  transform: scale(1.1); /* Enlarge image on hover */
+  transform: scale(1.1);
   cursor: pointer;
 }
-
