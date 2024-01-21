@@ -1,5 +1,3 @@
-<!--This is our home page. This is pre-sign in, welcome page-->
-<!--TODO: Update this page pls-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin Sun - Portfolio</title>
+  <title>ThreePointFive</title>
   <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
   <link rel="stylesheet" href={% static "styles/home.css" %}>
 
@@ -40,9 +38,15 @@
 
   <div class="content">
     <section id="summary">
-      <div class="summary-div"> <!--Need CSS!-->
-        <h1>Kevin Sun</h1>
-        <p>Trying to get internship please</p>
+      <div class="summary-div">
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/alexzheng04/" target="_blank"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a>
+          <a href="https://github.com/smalex-z" target="_blank"><img src="{% static 'images/github.png' %}" alt="Github"></a>
+          <a href="mailto:alexzheng2004@gmail.com" target="_blank"><img src="{% static 'images/mail.png' %}" alt="Mail"></a>
+        </div>
+        <p class="name">NAME</p>
+        <h1 class="quote">Something about you</h1>
+        <h1 class="quote">Line 2 if u need</h1>
       </div>
     </section>
     <section id="resume">
@@ -63,15 +67,15 @@
       </div>
     </section>
     <section id="projects">
-      <div class="projects-div"> <!--Need CSS!-->
+      <div class="projects-div">
         <h1>Projects</h1>
-        <p>Soemthing about projects here!</p>
+        <p>Something about projects here!</p>
       </div>
     </section>
     <section id="contact">
-      <div class="contact-div"> <!--Need CSS!-->
+      <div class="contact-div">
         <h2>Contact me!</h2>
-        <!-- Resume content goes here -->
+        <!-- Contact content goes here -->
         <button>Press This!</button>
         <button>or This!</button>
       </div>
@@ -103,5 +107,4 @@
  </div>
 
 </body>
-
 </html>

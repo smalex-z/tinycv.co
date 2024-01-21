@@ -1,0 +1,68 @@
+<!--This is our home page. This is pre-sign in, welcome page-->
+<!--TODO: Update this page pls-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreePointFive</title>
+  <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/alex.css' %}">
+  <script src="{% static 'import_styles/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'import_styles/dev_jquery-3.7.1.js' %}"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">Alex Zheng</div>
+    <div class="nav">
+      <ul>
+        <li><a href="#summary"><button class="nav-button">Summary</button></a></li>
+        <li><a href="#resume"><button class="nav-button">Resume</button></a></li>
+        <li><a href="#projects"><button class="nav-button">Projects</button></a></li>
+        <li><a href="#contact"><button class="nav-button">Contact</button></a></li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="content">
+    <section id="summary">
+      <div class="summary-div">
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/alexzheng04/" target="_blank"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a>
+          <a href="https://github.com/smalex-z" target="_blank"><img src="{% static 'images/github.png' %}" alt="Github"></a>
+          <a href="mailto:alexzheng2004@gmail.com" target="_blank"><img src="{% static 'images/mail.png' %}" alt="Mail"></a>
+        </div>
+        <p class="name">Alex Zheng</p>
+        <h1 class="quote">Create a project not because you're already skilled, but because</h1>
+        <h1 class="quote">you're willing to learn.</h1>
+      </div>
+    </section>
+    <section id="resume">
+      <div class="resume-div">
+        <h2>Resume</h2>
+        <!-- Resume content goes here -->
+        <button>Preview</button>
+        <button>Download</button>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="projects-div">
+        <h1>Projects</h1>
+        <p>Something about projects here!</p>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact-div">
+        <h2>Contact me!</h2>
+        <!-- Contact content goes here -->
+        <button>Press This!</button>
+        <button>or This!</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="{% static 'javascript/home.js' %}"></script>
+</body>
+</html>
