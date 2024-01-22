@@ -8,6 +8,9 @@ urlpatterns = [
     path("az", views.alex, name="alex"),                                  #homepage
     path("az/", views.alex, name="alex"),                                  #homepage
     path("az/project", views.cs, name="project"),                                  #homepage
+    path("base", views.base, name="base"),                                  #homepage
+    path("base/", views.base, name="base"),                                  #homepage
+    path("base/project", views.cs, name="base-project"),                                  #homepage
 
     #path('auth/', views.authentication_view, name='authentication'),    #authentication page for Login/Signup
     #path('logout/', views.logout_view, name='logout'),                  #URL used to logout, quickly redirected to home

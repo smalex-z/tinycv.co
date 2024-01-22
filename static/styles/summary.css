@@ -1,0 +1,28 @@
+.summary-div{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: right;
+    padding: 20px;
+    scroll-snap-align: start; /* Snap each section to the start of the viewport */
+  
+  }
+  
+  .socials{
+    flex-direction: row;
+    display: flex;  
+    justify-content: center;
+  }
+  
+  .socials a, .socials img {
+    height: 30px;
+    width: 30px;
+    margin: 15px;
+  }
+  
+  .name{
+    font-size: 180px;
+    font-weight: bold;
+    margin-top: 20vh;
+    margin-bottom: -30px;
+  }

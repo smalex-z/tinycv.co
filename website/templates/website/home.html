@@ -17,90 +17,11 @@
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="sidebar-content">
-      <div class="logo">UCLA</div>
-      <nav class="nav">
-        <div class="progress-bar">
-          <span class="circle"></span>
-          <a href="#summary" class="nav-link">Summary</a>
-          <span class="circle"></span>
-          <a href="#resume" class="nav-link">Resume</a>
-          <span class="circle"></span>
-          <a href="#projects" class="nav-link">Projects</a>
-          <span class="circle"></span>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-      </nav>
-
-    </div>
-  </div>
-
-  <div class="content">
-    <section id="summary">
-      <div class="summary-div">
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/alexzheng04/" target="_blank"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a>
-          <a href="https://github.com/smalex-z" target="_blank"><img src="{% static 'images/github.png' %}" alt="Github"></a>
-          <a href="mailto:alexzheng2004@gmail.com" target="_blank"><img src="{% static 'images/mail.png' %}" alt="Mail"></a>
-        </div>
-        <p class="name">NAME</p>
-        <h1 class="quote">Something about you</h1>
-        <h1 class="quote">Line 2 if u need</h1>
-      </div>
-    </section>
-    <section id="resume">
-      <div class="resume-div">
-        <div class="resumeTitle-div">
-            <h2>Resume</h2>
-        </div>
-        <div class="blurred-image-container">
-          <img src="{% static 'images/Dummy.png' %}" alt="Blurred Resume" class="blurred-image">
-        </div>
-        <div class="button-container">
-          <button data-bs-toggle="modal" data-bs-target="#resumeModal">Preview</button>
-          <a href="{% static 'images/Dummy.png' %}" download="myresume.png">
-            <button>Download</button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section id="projects">
-      {% include 'website/projects.html' %}
-    </section>
-    <section id="contact">
-      <div class="contact-div">
-        <h2>Contact me!</h2>
-        <!-- Contact content goes here -->
-        <button>Press This!</button>
-        <button>or This!</button>
-      </div>
-    </section>
+  <div>
+    Yall don't touch this, the home page is gonna be for smth else
   </div>
 
   <script src={% static "javascript/home.js" %}></script>
-
-
-  <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-       <div class="modal-content">
-          <div class="modal-header">
-             <h5 class="modal-title" id="resumeModalLabel">Resume Preview</h5>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-             <!-- Add your resume content here -->
-             <div class="modal-body">
-              <img src="{% static 'images/Dummy.png' %}" alt="Resume Image" class="img-fluid">
-           </div>
-          </div>
-          <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-             <!-- Add any additional buttons or functionality here -->
-          </div>
-       </div>
-    </div>
- </div>
 
 </body>
 </html>

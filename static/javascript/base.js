@@ -13,13 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  
     function highlightActiveButtonOnScroll() {
       const sections = document.querySelectorAll('.content section');
       const buttons = document.querySelectorAll('.nav-button');
@@ -48,6 +41,23 @@ document.addEventListener('DOMContentLoaded', function () {
         activeButton.classList.add('active');
       }
     }
+    
+    var sendButton = document.querySelector('.button input[type="button"]');
+
+  sendButton.addEventListener('click', function () {
+    const name = document.getElementById("name").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const emailBody = `Name: ${name}%0D%0A%0D%0ASubject: ${subject}%0D%0A%0D%0AMessage: ${message}`;
+
+    // Construct the mailto link with the dynamic email body
+    const mailtoLink = `mailto:alexzheng2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open the email client with the pre-filled email
+    window.location.href = mailtoLink;
+  });
+
   
     // Call the functions initially to set up the page
     highlightActiveButtonOnScroll();

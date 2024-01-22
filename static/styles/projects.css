@@ -1,4 +1,7 @@
-.projects-div {
+.projects-div{
+  height: 100vh;
+  background-color: #000000;
+  scroll-snap-align: start; /* Snap each section to the start of the viewport */
   margin: 20px;
 }
 
@@ -74,7 +77,7 @@
 }
 
 .project-details {
-  height: 130px; /* Fixed height for the details section */
+  height: 135px; /* Fixed height for the details section */
   background-color: rgb(224, 224, 224);
   text-align: left;
   color: rgb(0, 0, 0);
