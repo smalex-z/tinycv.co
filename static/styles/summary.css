@@ -21,8 +21,14 @@
   }
   
   .name{
-    font-size: 180px;
+    font-size: 9vw;
     font-weight: bold;
     margin-top: 20vh;
-    margin-bottom: -30px;
+    margin-bottom: -20px;
+  }
+
+  .quote{
+    font-size: 2.3vw;
+    font-weight: bold;
+    margin-top: 5px;
   }
