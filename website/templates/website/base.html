@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThreePointFive</title>
+  <title>TinyCv.co</title>
   <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'styles/base.css' %}">
   <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
@@ -49,17 +49,29 @@
     </section>
     <section id="resume">
       <div class="resume-div">
-        <div class="resumeTitle-div">
-          <h2>Resume</h2>
+        <div class="col-7 resumeTitle">
+          <h2>About Me</h2>
+          <div class = "aboutme">
+          <p>Hello! I'm Alex and I'm from Frederick Maryland - a small town about an hour north of Washington DC. I graduated with an 
+            International Baccalaureate (IB) diploma from Urbana High School. I am now an undergraduate Computer Science student at UCLA 
+            with Junior standing with a planned graduation in 2026.</p> <p>I spent the last two summers working as a Software Developer Intern 
+            at the National Institute of Standards and Technology Center for Neutron Research (NCNR) in Gaithersburg Maryland, where I 
+            primarily developed a neutron scattering simulation program.</p> <p>What sets me apart from my peers is that I am not afraid 
+            of venturing  into new fields and learning new skills. Too often you will see students declining projects or opportunities because 
+            they've never learned these such skill before- in contrast I embark on projects with the goal of learn the skills. This 
+            mindset has been the key to opening many opportunities for me in both my personal life and at UCLA.</p>
+          </div>
         </div>
-        <div class="blurred-image-container">
-          <img src="{% static 'images/az/az.png' %}" alt="Blurred Resume" class="blurred-image">
-        </div>
-        <div class="button-container">
-          <button data-bs-toggle="modal" data-bs-target="#resumeModal">Preview</button>
-          <a href="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" download="Alex_Zheng_Resume.png">
-            <button>Download</button>
-          </a>
+        <div class="col-5 resumePreview">
+          <div class="blurred-image-container">
+            <img src="{% static 'images/az/az.png' %}" alt="Blurred Resume" class="blurred-image">
+          </div>
+          <div class="button-container">
+            <button data-bs-toggle="modal" data-bs-target="#resumeModal" style="width: 30%;">Preview</button>
+            <a href="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" download="Alex_Zheng_Resume.png" style="width: 30%;">
+              <button style="width: 100%;">Download</button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
