@@ -8,6 +8,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TinyCv.co</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/az/azlogo.jpg' %}">
+
   <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'styles/base.css' %}">
   <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
@@ -25,10 +27,10 @@
     <div class="logo">UCLA</div>
     <div class="nav">
       <ul>
-        <li><a href="#summary"><button class="nav-button">Summary</button></a></li>
-        <li><a href="#resume"><button class="nav-button">Resume</button></a></li>
-        <li><a href="#projects"><button class="nav-button">Projects</button></a></li>
-        <li><a href="#contact"><button class="nav-button">Contact</button></a></li>
+        <li><a href="#summary"><button class="nav-button"><img src="{% static 'images/home.png' %}" alt="Home"><div class="des"> - Home</div></button></a></li>
+        <li><a href="#resume"><button class="nav-button"><img src="{% static 'images/resume.png' %}" alt="resume"><div class="des"> - Resume</div></button></a></li>
+        <li><a href="#projects"><button class="nav-button"><img src="{% static 'images/project.png' %}" alt="projects"><div class="des"> - Projects</div></button></a></li>
+        <li><a href="#contact"><button class="nav-button"><img src="{% static 'images/contact.png' %}" alt="contact"><div class="des"> - Contact</div></button></a></li>
       </ul>
     </div>
     
@@ -52,14 +54,17 @@
         <div class="col-7 resumeTitle">
           <h2>About Me</h2>
           <div class = "aboutme">
-          <p>Hello! I'm Alex and I'm from Frederick Maryland - a small town about an hour north of Washington DC. I graduated with an 
-            International Baccalaureate (IB) diploma from Urbana High School. I am now an undergraduate Computer Science student at UCLA 
-            with Junior standing with a planned graduation in 2026.</p> <p>I spent the last two summers working as a Software Developer Intern 
-            at the National Institute of Standards and Technology Center for Neutron Research (NCNR) in Gaithersburg Maryland, where I 
-            primarily developed a neutron scattering simulation program.</p> <p>What sets me apart from my peers is that I am not afraid 
-            of venturing  into new fields and learning new skills. Too often you will see students declining projects or opportunities because 
-            they've never learned these such skill before- in contrast I embark on projects with the goal of learn the skills. This 
-            mindset has been the key to opening many opportunities for me in both my personal life and at UCLA.</p>
+          <p>Hello! I'm Alex and I'm from Frederick Maryland - a small town about an hour north of Washington DC. Some fun facts about me:
+            <ul>
+              <li>  Graduated with an International Baccalaureate (IB) diploma from Urbana High School.</li>
+              <li>  Undergraduate Computer Science student at UCLA with Junior standing with a planned graduation in 2026.</li>
+              <li>  Worked as a Software Developer Intern from June 2022 until August 2023 at the National Institute of Standards 
+                and Technology Center for Neutron Research (NCNR) primarily developing a neutron scattering 
+                simulation program.</li>
+            </ul> 
+            I am an enthusiastic student, deeply committed to embracing flexibility and constantly exploring new areas to broaden my 
+            skills and knowledge base. <br> <br> Feel free to take a look at or download my resume on the right!
+            </p>
           </div>
         </div>
         <div class="col-5 resumePreview">
@@ -195,7 +200,7 @@
               <iframe 
                 src="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" 
                 width="100%" 
-                height="600px" 
+                height="100%" 
                 style="border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); outline: none;"
               ></iframe>
            </div>

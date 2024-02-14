@@ -35,6 +35,11 @@
     padding-bottom: .75vh;
   }
 
+  .aboutme li{
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+
   .resumePreview{
     display: flex;
     flex-direction: column;
@@ -99,6 +104,11 @@
     max-width: 60%; /* You can adjust this value to your desired width */
   }
 
+  .modal-content{
+    height: 90vh;
+  }
+
   .modal-body{
-    padding: 5px 10px 5px 10px;
+    padding: 10px;
+    height: 100%;
   }
