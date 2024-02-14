@@ -7,7 +7,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThreePointFive</title>
+  <title>TinyCv.co</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/az/azlogo.jpg' %}">
+
   <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'styles/base.css' %}">
   <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
@@ -24,10 +26,10 @@
     <div class="logo">Alex Zheng</div>
     <div class="nav">
       <ul>
-        <li><a href="#summary"><button class="nav-button">Summary</button></a></li>
-        <li><a href="#resume"><button class="nav-button">Resume</button></a></li>
-        <li><a href="#projects"><button class="nav-button">Projects</button></a></li>
-        <li><a href="#contact"><button class="nav-button">Contact</button></a></li>
+        <li><a href="#summary"><button class="nav-button"><img src="{% static 'images/home.png' %}" alt="Home"><div class="des"> - Home</div></button></a></li>
+        <li><a href="#resume"><button class="nav-button"><img src="{% static 'images/resume.png' %}" alt="resume"><div class="des"> - Resume</div></button></a></li>
+        <li><a href="#projects"><button class="nav-button"><img src="{% static 'images/project.png' %}" alt="projects"><div class="des"> - Projects</div></button></a></li>
+        <li><a href="#contact"><button class="nav-button"><img src="{% static 'images/contact.png' %}" alt="contact"><div class="des"> - Contact</div></button></a></li>
       </ul>
     </div>
     
@@ -48,17 +50,32 @@
     </section>
     <section id="resume">
       <div class="resume-div">
-        <div class="resumeTitle-div">
-          <h2>Resume</h2>
+        <div class="col-7 resumeTitle">
+          <h2>About Me</h2>
+          <div class = "aboutme">
+            <p>Hello! I'm Alex and I'm from Frederick Maryland - a small town about an hour north of Washington DC. Some fun facts about me:
+              <ul>
+                <li>  Graduated with an International Baccalaureate (IB) diploma from Urbana High School.</li>
+                <li>  Undergraduate Computer Science student at UCLA with Junior standing with a planned graduation in 2026.</li>
+                <li>  Worked as a Software Developer Intern from June 2022 until August 2023 at the National Institute of Standards 
+                  and Technology Center for Neutron Research (NCNR) primarily developing a neutron scattering 
+                  simulation program.</li>
+              </ul> 
+              I am an enthusiastic student, deeply committed to embracing flexibility and constantly exploring new areas to broaden my 
+              skills and knowledge base. <br> <br> Feel free to take a look at or download my resume on the right!
+              </p>
+          </div>
         </div>
-        <div class="blurred-image-container">
-          <img src="{% static 'images/az/az.png' %}" alt="Blurred Resume" class="blurred-image">
-        </div>
-        <div class="button-container">
-          <button data-bs-toggle="modal" data-bs-target="#resumeModal">Preview</button>
-          <a href="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" download="Alex_Zheng_Resume.png">
-            <button>Download</button>
-          </a>
+        <div class="col-5 resumePreview">
+          <div class="blurred-image-container">
+            <img src="{% static 'images/az/az.png' %}" alt="Blurred Resume" class="blurred-image">
+          </div>
+          <div class="button-container">
+            <button data-bs-toggle="modal" data-bs-target="#resumeModal" style="width: 30%;">Preview</button>
+            <a href="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" download="Alex_Zheng_Resume.png" style="width: 30%;">
+              <button style="width: 100%;">Download</button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

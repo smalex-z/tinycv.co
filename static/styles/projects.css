@@ -3,6 +3,10 @@
   background-color: #000000;
   scroll-snap-align: start; /* Snap each section to the start of the viewport */
   padding: 20px;
+  background-image: url("../images/bg.avif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .header {

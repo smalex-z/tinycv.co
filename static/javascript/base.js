@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     var sidebar = document.querySelector('.sidebar');
     var content = document.querySelector('.content');
+    var navbar = document.querySelectorAll('.nav-button');
+    var des = document.querySelectorAll('.des');
+
     var scrollTimeout;
   
     function toggleSidebar() {
@@ -11,6 +14,20 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebar.classList.remove('scrolled');
         content.classList.remove('scrolled');
       }
+      navbar.forEach(function(button) {
+        if (content.scrollTop > 50) {
+          button.classList.add('scrolled');
+        } else {
+          button.classList.remove('scrolled');
+        }
+      });
+      des.forEach(function(button) {
+        if (content.scrollTop > 50) {
+          button.classList.add('scrolled');
+        } else {
+          button.classList.remove('scrolled');
+        }
+      });
     }
   
     function highlightActiveButtonOnScroll() {
