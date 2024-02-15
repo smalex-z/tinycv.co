@@ -3,7 +3,7 @@
     flex-direction: column;
     height: 100vh;
     text-align: right;
-    padding: 20px;
+    padding: 25px;
     scroll-snap-align: start; /* Snap each section to the start of the viewport */
     background-image: url("../images/bg.avif");
     background-repeat: no-repeat;
