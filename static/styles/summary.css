@@ -5,7 +5,7 @@
     text-align: right;
     padding: 25px;
     scroll-snap-align: start; /* Snap each section to the start of the viewport */
-    background-image: url("../images/bg.avif");
+    background-image: url("../images/base/bg.avif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

@@ -14,5 +14,3 @@ def cs(request):
 def base(request):
     return render(request, 'website/base.html')
 
-def cs(request):
-    return render(request, 'website/CS.html')

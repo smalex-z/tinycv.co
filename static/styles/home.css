@@ -1,0 +1,196 @@
+/* styles.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/home/homebg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    height: 85px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  
+    background-color: black;
+    font-family: 'Source Sans Pro';
+  
+    box-shadow: 0px 15px 20px 10px black;
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+    height: 90px;
+  }
+  
+  .logo {
+    height: 90px;
+  }
+  
+  .middle-section {
+    position: absolute;
+    left: 50%;  /* Move the left side to the center of the parent */
+    transform: translateX(-50%);  /* Shift it back by half of its width to center it */
+    align-items: center;
+    flex-grow: 0;
+  }
+  
+  .header-button {
+    /*all buttons in the header*/
+    background: #000;
+    color: #FFF;
+    padding-left: 10px;
+    padding-right: 10px;    
+    height: 50px;
+    position: relative;
+    border: none;
+
+  
+    text-align: center;
+    line-height: 50px;
+    font-size: x-large;
+    font-weight: bold;
+  
+    cursor: pointer;
+    transition: text-decoration 0.3s ease; /* Add smooth transition */
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  
+  .header-button:hover {
+    text-decoration: underline;
+  }
+  
+  .login-button{
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: x-large;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  
+  .header-spacer{
+    height:85px;
+  }
+
+.shorten-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+}
+
+.shorten-form {
+    margin-top: 20px;
+}
+
+.shorten-form input, .shorten-form button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.shorten-btn {
+    background-color: silver;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.shorten-btn:hover {
+    opacity: 0.8;
+}
+
+footer {
+    background: #000;
+    color: silver;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+/* Media query for screens smaller than 1300px */
+@media only screen and (max-width: 1300px) {
+    .logo {
+      height: 56px; /* You may adjust as needed */
+    }
+  
+    .header , .header-spacer {
+      height: 66px;
+    }
+    
+  
+    .header-button {
+      font-size: large; /* Reduce font size */
+      height: 40px;
+      width: 120px;
+      line-height: 40px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+  
+    .signup-button{
+      width: 120px;
+      height: 40px;
+      border-radius: 20px;
+      font-size: large;
+    }
+  
+  }
+  
+  /* Media query for screens smaller than 1000px */
+  @media only screen and (max-width: 1000px) {
+    .logo {
+      height: 40px; /* You may adjust as needed */
+    }
+    .header {
+      height: 47px;
+    }
+  
+    .header-button {
+      font-size: small; /* Reduce font size */
+      height: 30px;
+      width: 90px;
+      line-height: 30px;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+  
+    .signup-button{
+      width: 90px;
+      height: 30px;
+      border-radius: 15px;
+      font-size: small;
+    }
+  
+  }
