@@ -1,40 +1,133 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TinyCv.co</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'images/az/azlogo.jpg' %}">
+      
+        <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/home.css' %}">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tinyCV</title>
-  <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
-  <link rel="stylesheet" href={% static "styles/home.css" %}>
-  <link rel="stylesheet" href={% static "styles/projects.css" %}>
-
-  <script src={% static "import_styles/bootstrap.bundle.min.js" %}></script>
-  <script src={% static "import_styles/dev_jquery-3.7.1.js" %}></script>
-
-
-</head>
-
+        <link href={% static "import_styles/source_sans_font.css" %} rel="stylesheet" />
+      
+        <script src="{% static 'import_styles/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'import_styles/dev_jquery-3.7.1.js' %}"></script>
+      </head>
 <body>
-  <style>
-    body { text-align: center; padding: 150px; }
-    h1 { font-size: 50px; }
-    body { font: 20px Helvetica, sans-serif; color: #333; }
-    article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-    a { color: #dc8100; text-decoration: none; }
-    a:hover { color: #333; text-decoration: none; }
-  </style>
-  
-  <article>
-      <h1>We&rsquo;ll be back soon!</h1>
-      <div>
-          <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:#alexzheng2004@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-          <p>&mdash; TinyCV Team</p>
+
+<div class="container">
+    <div class="navbar header">
+        <div class="left-section">
+            <a href="{% url 'home' %}">
+            <img src="{% static 'images/home/logo.png' %}" alt="logo" class="logo" />
+            </a>
+        </div>
+        <div class="middle-section">
+            <button onclick="window.location.href='{% url 'home' %}';" class="header-button">
+              WARDROBE
+            </button>
+            <button onclick="window.location.href='{% url 'home' %}';" class="header-button">INSPIRATION</button>
+            <button class="header-button">BUILD</button>
+          </div>
+        <div class="right-section">
+            <button onclick="window.location.href='{% url "home" %}';" class="login-button">Login</button>
+        </div>
+    </div>
+
+    <div class="header-spacer"></div>
+
+
+    <div class= "everythingElse">
+        <div class="maintext">Create a personal website in seconds!</div>
+
+        <section class="shorten-section">
+            <form class="shorten-form" method="post">
+                <div class="col">
+                    {% csrf_token %}
+                    <h1>Choose a personal domain:</h1>
+                    <div class="h2 mt-5">
+                        tincv.co/
+                        <input type="text" name="custom_short_url" placeholder="Enter URL">
+                    </div>
+                    
+                </div>
+                <div class="divider-v"></div>
+                <div class="col">
+                    <div class="option redirect">
+                        <h2 class="mt-2">Option 1: (Existing Website)</h2>
+                        <div class="h3">
+                            Redirect to:
+                            <input type="text" name="long_url" placeholder="Existing Site URL">
+                        </div>
+                        <button class="shorten-btn" type="submit">Shorten</button>
+                    </div>
+                    <div class="divider-h"></div>
+                    <div class="option template">
+                        <h2 class="mt-2">Option 2: (Create a Website)</h2>
+                        <div class="h3">
+                            Coming Soon!
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <footer class="footer">
+            <p>tinyCV.co 2024</p>
+        </footer>
+    </div>
+</div>
+
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Your URL has been successfully shortened.
+        </div>
       </div>
-  </article>
+    </div>
+  </div>
+  
+  <!-- Failure Modal -->
+  <div class="modal fade" id="failureModal" tabindex="-1" aria-labelledby="failureModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="failureModalLabel">Failure</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          There was an error shortening your URL. Please try again.
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src={% static "javascript/home.js" %}></script>
+<script src="{% static 'javascript/base.js' %}"></script>
 
+<script>
+    $(document).ready(function(){
+      {% if success_modal %}
+        $('#successModal').modal('show');
+        setTimeout(function() {
+          $('#successModal').modal('hide');
+        }, 3000); // 3000 milliseconds = 3 seconds
+      {% endif %}
+  
+      {% if failure_modal and request.method == 'POST' %}
+        $('#failureModal').modal('show');
+      {% endif %}
+    });
+  </script>
+  
+  
 </body>
 </html>
+
