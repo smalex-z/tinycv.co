@@ -1,87 +1,89 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TinyCv.co</title>
-        <link rel="icon" type="image/x-icon" href="{% static 'images/az/azlogo.jpg' %}">
-      
-        <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'styles/home.css' %}">
 
-        <link href={% static "import_styles/source_sans_font.css" %} rel="stylesheet" />
-      
-        <script src="{% static 'import_styles/bootstrap.bundle.min.js' %}"></script>
-        <script src="{% static 'import_styles/dev_jquery-3.7.1.js' %}"></script>
-      </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinyCv.co</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/az/azlogo.jpg' %}">
+
+  <link rel="stylesheet" href="{% static 'import_styles/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+
+  <link href={% static "import_styles/source_sans_font.css" %} rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <script src="{% static 'import_styles/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'import_styles/dev_jquery-3.7.1.js' %}"></script>
+</head>
+
 <body>
 
-<div class="container">
+  <div class="container">
     <div class="navbar header">
-        <div class="left-section">
-            <a href="{% url 'home' %}">
-            <img src="{% static 'images/home/logo.png' %}" alt="logo" class="logo" />
-            </a>
-        </div>
-        <div class="middle-section">
-            <button onclick="window.location.href='{% url 'home' %}';" class="header-button">
-              WARDROBE
-            </button>
-            <button onclick="window.location.href='{% url 'home' %}';" class="header-button">INSPIRATION</button>
-            <button class="header-button">BUILD</button>
-          </div>
-        <div class="right-section">
-            <button onclick="window.location.href='{% url "home" %}';" class="login-button">Login</button>
-        </div>
+      <div class="left-section">
+        <a href="{% url 'home' %}">
+          <img src="{% static 'images/home/logo.png' %}" alt="logo" class="logo" />
+        </a>
+      </div>
+      <div class="middle-section">
+      </div>
+      <div class="right-section">
+        <button onclick="window.location.href='{% url "home" %}';" class="login-button">Login</button>
+      </div>
     </div>
 
     <div class="header-spacer"></div>
 
 
-    <div class= "everythingElse">
-        <div class="maintext">Create a personal website in seconds!</div>
+    <div class="everythingElse">
+      <div class="maintext">Get a professional domain in seconds!</div>
+      <div class="row">
+        <section class="col shorten-section d-flex">
+          <div class="box">
+            <div class="headline">Say Goodbye to Long GitHub URLs!</div>
+            <div class="subtext">Recruiters don't have time to wrestle with lengthy, confusing GitHub URLs. 
+              A professional domain from tinyCV.co makes sure your portfolio is easy to remember and even easier 
+              to share. Stand out with a sleek, personalized link that reflects your professionalism.</div>
+          </div>
 
-        <section class="shorten-section">
-            <form class="shorten-form" method="post">
-                <div class="col">
-                    {% csrf_token %}
-                    <h1>Choose a personal domain:</h1>
-                    <div class="h2 mt-5">
-                        tincv.co/
-                        <input type="text" name="custom_short_url" placeholder="Enter URL">
-                    </div>
-                    
-                </div>
-                <div class="divider-v"></div>
-                <div class="col">
-                    <div class="option redirect">
-                        <h2 class="mt-2">Option 1: (Existing Website)</h2>
-                        <div class="h3">
-                            Redirect to:
-                            <input type="text" name="long_url" placeholder="Existing Site URL">
-                        </div>
-                        <button class="shorten-btn" type="submit">Shorten</button>
-                    </div>
-                    <div class="divider-h"></div>
-                    <div class="option template">
-                        <h2 class="mt-2">Option 2: (Create a Website)</h2>
-                        <div class="h3">
-                            Coming Soon!
-                        </div>
-                    </div>
-                </div>
-            </form>
         </section>
-        <footer class="footer">
-            <p>tinyCV.co 2024</p>
-        </footer>
+
+        <section class="col shorten-section d-flex">
+          <div class="box">
+            <form class="shorten-form" method="post">
+              <div class="d-flex flex-column h-100 w-100 justify-content-between align-items-center">
+                {% csrf_token %}
+                <div class="row mt-2">
+                  <h2>Choose a personal domain:</h2>
+                </div>
+                <div class="h3">
+
+                  tinycv.co/
+                  <input type="text" name="custom_short_url" placeholder="Enter URL">
+                </div>
+                <div class="h3">
+                  Redirect to:
+                  <input type="text" name="long_url" placeholder="https://yourwebsite.com">
+                </div>
+                <button class="call-to-action mb-4" type="submit">Shorten</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <p>tinyCV.co 2024</p>
+      </footer>
     </div>
-</div>
+  </div>
 
 
-<!-- Success Modal -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -94,7 +96,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Failure Modal -->
   <div class="modal fade" id="failureModal" tabindex="-1" aria-labelledby="failureModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -110,24 +112,24 @@
     </div>
   </div>
 
-<script src="{% static 'javascript/base.js' %}"></script>
+  <script src="{% static 'javascript/base.js' %}"></script>
 
-<script>
-    $(document).ready(function(){
+  <script>
+    $(document).ready(function () {
       {% if success_modal %}
-        $('#successModal').modal('show');
-        setTimeout(function() {
-          $('#successModal').modal('hide');
-        }, 3000); // 3000 milliseconds = 3 seconds
+      $('#successModal').modal('show');
+      setTimeout(function () {
+        $('#successModal').modal('hide');
+      }, 3000); // 3000 milliseconds = 3 seconds
       {% endif %}
-  
+
       {% if failure_modal and request.method == 'POST' %}
-        $('#failureModal').modal('show');
+      $('#failureModal').modal('show');
       {% endif %}
     });
   </script>
-  
-  
-</body>
-</html>
 
+
+</body>
+
+</html>
