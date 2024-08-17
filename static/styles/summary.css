@@ -18,10 +18,16 @@
   }
   
   .socials a, .socials img {
-    height: 30px;
-    width: 30px;
-    margin: 15px;
+    height: 2.5em;
+    width: 2.5em;
+    margin: .5em 1.25em 0 1.25em;
   }
+
+  .socials a:hover, .socials img:hover {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8)); /* White glow only around the visible parts */
+  }
+
+
   
   .name{
     font-size: 9vw;
