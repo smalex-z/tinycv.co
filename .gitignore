@@ -1,13 +1,2 @@
-threepointfive/__pycache__/settings.cpython-311.pyc
-website/__pycache__/urls.cpython-311.pyc
-website/__pycache__/views.cpython-311.pyc
-threepointfive/settings.py
-threepointfive/__pycache__/urls.cpython-311.pyc
-website/__pycache__/admin.cpython-311.pyc
-website/__pycache__/models.cpython-311.pyc
-website/__pycache__/urls.cpython-311.pyc
-website/__pycache__/views.cpython-311.pyc
-website/migrations/__pycache__/0001_initial.cpython-311.pyc
-threepointfive/__pycache__/settings.cpython-311.pyc
-threepointfive/__pycache__/urls.cpython-311.pyc
+threepointfive/__pycache__
 db.sqlite3
