@@ -20,7 +20,7 @@
   grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
   gap: 20px; /* Space between cards */
   padding: 20px;
-  max-height: calc(2 * 40vh + 80px); /* Adjust based on the height of a card and the gap */
+  max-height: calc(2 * 40vh + 4em + 80px); /* Adjust based on the height of a card and the gap */
     overflow: hidden; /* Hide anything beyond the first two rows */
 }
 
