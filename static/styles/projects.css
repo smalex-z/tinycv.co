@@ -10,85 +10,169 @@
 }
 
 .header {
-  height: 10vh;
+  height: 5vh;
   /* Other styles for the header */
 }
-.custom-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
+/* Container for the project cards */
+.project-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  max-height: calc(2 * 40vh + 4em + 80px); /* Adjust based on the height of a card and the gap */
+    overflow: hidden; /* Hide anything beyond the first two rows */
+}
+
+.project-card {
+  position: relative;  
+  margin-bottom: 2em;
+  padding: .5em;
+  padding-bottom: 1em;
+  margin: .5em;
+  border-radius: .5em;
+  border: 2px solid #61616130;
+  overflow: hidden; 
+  transition: box-shadow 0.3s ease-in-out;
+  font-size: 1em;
+  height: 40vh;
+  max-height: 40vh;
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.39);
+  background-color: #ffffff;
   align-items: center;
-  height: 90vh; /* Remaining height after the header */
-  padding: 10px; /* Padding around the container */
-  margin-top: -40px; /* Offset for the header */
+  display: grid;
+}
+
+.project-card:hover .card-hover-content {
+  opacity: 1;
 
 }
 
-.projects-div h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 10px;
+.project-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4); 
 }
 
-.card {
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  border-radius: 0px;
-  border: 1px solid #f0f0f0;  /* 1px wide grey border */
-  width: calc((80vw - 440px) / 3); /* Subtract total horizontal padding/margin and divide by the number of blocks per row */
-  height: calc(((80vw + 100px) / 3)); /* Same as width to maintain square shape */
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  padding: 0px;
+.project-image {
+  align-items: center;
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  max-width: 30vh;
+  max-height: 30vh; /* Ensures the image stays within a square */
+  width: 100%; /* Ensures the image scales properly */
+  height: 100%; /* Ensures the image scales properly */
+  object-fit: cover; /* Crops the image to fit within the square */
+  overflow: hidden; /* Ensures that any overflow is hidden */
+  border-radius: 0.5em; /* Optional: Rounds the corners of the image */
 }
 
-.project-box {
-  flex-grow: 1;;
-  display: flex;
-  flex-direction: column;
-  min-height: 0; /* Allow .project-box to shrink if needed */
 
-}
-
-.project-box a {
-  text-decoration: none;
+.card-hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  background-color: rgba(255, 255, 255, .925);  
   color: black;
   display: flex;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  font-size: 1.2em; 
+  font-family: sans-serif;
   flex-direction: column;
-  overflow: hidden; /* Prevent content from overflowing */
-  flex-grow: 1;
+  justify-content: space-between;
 }
 
-.project-box h2 {
-  margin: 10px;
-  flex-grow: 0;
+.project-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  align-self: end;
 }
 
-.project-image{
-  flex-grow: 1;
-  min-height: 0; /* Prevent the image from stretching larger than its flex container */
-  height: calc(100% - 200px); /* 200px = 50px (header) + 150px (footer) */
+.project-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+}
+.project-description b{
+  padding: 0;
 }
 
-.project-box img {
-  padding: 10px;
-  object-fit: cover; /* Cover the area without stretching */
-  object-position: top; /* Align the top part of the image with the container */
-  height: 100%;
-  width: 100%;
+.project-links {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 }
 
-.project-details {
-  height: 135px; /* Fixed height for the details section */
-  background-color: rgb(224, 224, 224);
-  text-align: left;
-  color: rgb(0, 0, 0);
-  flex-grow: 0;
-  padding: 10px; /* Maintain internal spacing */
+.link-icon, .grey-link {
+  display: inline;
+  margin: 0; /* Remove any margin that might cause spacing */
+  padding: 0; /* Remove padding */
 }
 
+a.grey-link {
+  color: #808080; /* Set the color to gray */
+}
+a.grey-link b{
+  padding: 0;
+}
+
+
+/* Optional: Add a hover effect */
+a.grey-link:hover {
+  color: #606060; /* Slightly darker gray on hover */
+}
+
+.project-linksa {
+  font-weight: bold;
+  color: #10a0d4;
+  text-decoration: none;
+}
+
+.project-linksa:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */@media (max-width: 1200px) {
+  .project-grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+
+  .project-description {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    font-size: .7em;
+  }
+
+
+  .project-description {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-grid-container {
+    grid-template-columns: 1fr; /* 1 column on extra small screens */
+    font-size: .5em;
+  }
+
+  .project-description {
+    font-size: .5rem;
+  }
+}
 
 
 .card:hover {

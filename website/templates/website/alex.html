@@ -1,9 +1,9 @@
-
 <!--This is our home page. This is pre-sign in, welcome page-->
 <!--TODO: Update this page pls-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,53 +17,93 @@
   <link rel="stylesheet" href="{% static 'styles/resume.css' %}">
 
   <link rel="stylesheet" href={% static "styles/projects.css" %}>
-  
+
   <script src="{% static 'import_styles/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'import_styles/dev_jquery-3.7.1.js' %}"></script>
 </head>
+
 <body>
   <div class="sidebar">
     <div class="logo">Alex Zheng</div>
     <div class="nav">
       <ul>
-        <li><a href="#summary"><button class="nav-button"><img src="{% static 'images/base/home.png' %}" alt="Home"><div class="des"> - Home</div></button></a></li>
-        <li><a href="#resume"><button class="nav-button"><img src="{% static 'images/base/resume.png' %}" alt="resume"><div class="des"> - Resume</div></button></a></li>
-        <li><a href="#projects"><button class="nav-button"><img src="{% static 'images/base/project.png' %}" alt="projects"><div class="des"> - Projects</div></button></a></li>
-        <li><a href="#contact"><button class="nav-button"><img src="{% static 'images/base/contact.png' %}" alt="contact"><div class="des"> - Contact</div></button></a></li>
+        <li><a href="#summary"><button class="nav-button"><img src="{% static 'images/base/home.png' %}" alt="Home">
+              <div class="des"> - Home</div>
+            </button></a></li>
+        <li><a href="#resume"><button class="nav-button"><img src="{% static 'images/base/resume.png' %}" alt="resume">
+              <div class="des"> - Resume</div>
+            </button></a></li>
+        <li><a href="#projects"><button class="nav-button"><img src="{% static 'images/base/project.png' %}"
+                alt="projects">
+              <div class="des"> - Projects</div>
+            </button></a></li>
+        <li><a href="#contact"><button class="nav-button"><img src="{% static 'images/base/contact.png' %}"
+                alt="contact">
+              <div class="des"> - Contact</div>
+            </button></a></li>
       </ul>
     </div>
-    
+
   </div>
 
   <div class="content">
     <section id="summary">
       <div class="summary-div">
         <div class="socials">
-          <a href="https://www.linkedin.com/in/alexzheng04/" target="_blank"><img src="{% static 'images/base/linkedin.png' %}" alt="LinkedIn"></a>
-          <a href="https://github.com/smalex-z" target="_blank"><img src="{% static 'images/base/github.png' %}" alt="Github"></a>
-          <a href="mailto:alexzheng2004@gmail.com" target="_blank"><img src="{% static 'images/base/mail.png' %}" alt="Mail"></a>
+          <a href="https://www.linkedin.com/in/alexzheng04/" target="_blank"><img
+              src="{% static 'images/base/linkedin.png' %}" alt="LinkedIn"></a>
+          <a href="https://github.com/smalex-z" target="_blank"><img src="{% static 'images/base/github.png' %}"
+              alt="Github"></a>
+          <a href="mailto:alex.htzheng@gmail.com" target="_blank"><img src="{% static 'images/base/mail.png' %}"
+              alt="Mail"></a>
         </div>
         <p class="name">Alex Zheng</p>
-        <h1 class="quote">Create a project not because you're already skilled, but</h1>
-        <h1 class="quote">because you're willing to learn.</h1>
+        <h1 class="quote">Create a project not because you're already skilled, but because you're willing to learn.</h1>
       </div>
     </section>
     <section id="resume">
       <div class="resume-div">
         <div class="col-7 resumeTitle">
-          <h2>About Me</h2>
-          <div class = "aboutme">
-            <p>Hello! I'm Alex and I'm from Frederick Maryland - a small town about an hour north of Washington DC. Some fun facts about me:
-              <ul>
-                <li>  Graduated with an International Baccalaureate (IB) diploma from Urbana High School.</li>
-                <li>  Undergraduate Computer Science student at UCLA with Junior standing with a planned graduation in 2026.</li>
-                <li>  Worked as a Software Developer Intern from June 2022 until August 2023 at the National Institute of Standards 
-                  and Technology Center for Neutron Research (NCNR) primarily developing a neutron scattering 
-                  simulation program.</li>
-              </ul> 
-              I am an enthusiastic student, deeply committed to embracing flexibility and constantly exploring new areas to broaden my 
-              skills and knowledge base. <br> <br> Feel free to take a look at or download my resume on the right!
-              </p>
+          <h2 class="aboutmeTitle">About Me</h2>
+          <div class="aboutme">
+            <p>Hello! I'm Alex and I'm from Frederick Maryland - a small town about an hour north of Washington DC. My
+              resume is displayed on the right, and my professional experience timeline below. Feel free to take a look!
+            </p>
+            <div class="timeline">
+              <div class="outer">
+                <div class="cus-card">
+                  <div class="info">
+                    <h3 class="title">05/2023 || IB Diploma @ Urbana HS</h3>
+                    <p>Graduated with an International Baccalaureate (IB) diploma from Urbana High School.</p>
+                  </div>
+                </div>
+                <div class="cus-card">
+                  <div class="info">
+                    <h3 class="title">Software Developer Intern || 06/2022 - 08/2023</h3>
+                    <p>Worked as a Software Developer Intern from June 2022 until August 2023 at the NIST Center for
+                      Neutron Research (NCNR) primarily developing a neutron scattering
+                      simulation program. </p>
+                  </div>
+                </div>
+                <div class="cus-card">
+                  <div class="info">
+                    <h3 class="title">09/2023 - 06/2026 || Computer Science BS @ UCLA</h3>
+                    <p>Undergraduate Computer Science student at UCLA with Junior standing with a planned graduation in
+                      2026. Internal Board Dev Team officer @ UCLA Association for Computing Machinery (ACM) and Board
+                      Officer for UCLA Creative Labs (CL).</p>
+                  </div>
+                </div>
+                <div class="cus-card">
+                  <div class="info">
+                    <h3 class="title">Student Undergraduate Engineer || 06/2024 - 09/2024</h3>
+                    <p>Currently working as a Student Undergraduate Engineer at the Charles Stark Draper Laboratory,
+                      primarily doing Models based System Engineering (MBSE), as well as work with simulations on the
+                      Trident II missile system.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </p>
           </div>
         </div>
         <div class="col-5 resumePreview">
@@ -71,74 +111,210 @@
             <img src="{% static 'images/az/az.png' %}" alt="Blurred Resume" class="blurred-image">
           </div>
           <div class="button-container">
-            <button data-bs-toggle="modal" data-bs-target="#resumeModal" style="width: 30%;">Preview</button>
-            <a href="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" download="Alex_Zheng_Resume.png" style="width: 30%;">
-              <button style="width: 100%;">Download</button>
+            <button data-bs-toggle="modal" data-bs-target="#resumeModal" style="width: 30%;"><b>Preview</b></button>
+            <a href="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" download="Alex_Zheng_Resume.png"
+              style="width: 30%;">
+              <button style="width: 100%;"><b>Download</b></button>
             </a>
           </div>
         </div>
       </div>
     </section>
     <section id="projects">
-      
-<div class="projects-div">
-  <h1 class="header">Projects</h1>
-  <div class="row border-box custom-row">
-    <div class="card">
-      <div class="project-box project1">
-        <a target="_blank" href="{% url 'project' %}">
-          <h2>tinyCV.co</h2>
-          <div class="project-image">
-            <img src="../static/images/az/tinyCV.png" alt="tinyCV.co">
+
+      <div class="projects-div">
+        <h1 class="header">Projects</h1>
+
+        <div class="project-grid-container">
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/az/tinyCV.png" alt="tinyCV.co" class="project-image">
+            <h3 class="project-title">tinyCV.co</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link" href="{% url 'project' %}"><b>View Project</b></a>
+                    </p>
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://github.com/smalex-z/threepointfive"><b>View Repo</b></a></p>
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> AWS-hosted Django platform for clients to create and share
+                      professional personal websites with a concise and professional domain name along with Google
+                      Analytics for client insights.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> AWS, HTML, CSS, JavaScript, Django, Bootstrap, Google Analytics
+              </div>
+            </div>
           </div>
-          <div class="project-details">
-            AWS hosted site that provides a simple domain name for users to create and share their own personal websites on their resumes.
+
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/az/proxmox.png" alt="ProxMox" class="project-image">
+            <h3 class="project-title">Enterprise Server Virtualization Solution</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link" href="{% url 'project' %}"><b>View Project</b></a>
+                    </p>
+
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> Set up a "Mini-AWS" enterprise-level server solution using a Type 1
+                      Hypervisor, concurrently running multiple Linux, MacOS and Windows virtual machines for optimized
+                      performance and seamless access to multiple operating systems</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> Proxmox VE 8.0, Ubuntu (Linux), MacOS, Windows
+              </div>
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="project-box project1">
-        <a target="_blank" href="https://drive.google.com/drive/folders/1MPnytnxjLoYHDBbDw1OWOFbDvJUn4Kwa?usp=sharing">
-          <h2>SureFashion</h2>
-          <div class="project-image">
-            <img src="../static/images/az/surefashion.png" alt="SureFasion">
+
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/az/sasview.jpg" alt="Sasview" class="project-image">
+            <h3 class="project-title">Sasview</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link" href="https://www.sasview.org"><b>View
+                          Project</b></a>
+                    </p>
+                    <p class="col link-icon">🔗<a class="grey-link" href="https://github.com/SasView/sasview"><b>View
+                          Repo</b></a></p>
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> Sasview is a Python program built to facilitate analysis of Small
+                      Angle Neutron Scattering (SANS) data. The program calculates the structure of materials from its
+                      interaction with neutrons. Used in combination with the NIST
+                      Center for Neutron Research's 20 MW reasearch nuclear reactor.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> Python, Pyside6, Qt framework, C language, Multithreading, GPU utilization
+              </div>
+            </div>
           </div>
-          <div class="project-details">
-            Responsive Django web-application using HTML/CSS, Bootstrap, and JavaScript designed to allow users to curate wardrobes, explore outfits, and experiment with styles.
+
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/az/squirtle.jpg" alt="Squirtle" class="project-image">
+            <h3 class="project-title">Squirtle</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link" href="{% url 'project' %}"><b>View Project</b></a>
+                    </p>
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://github.com/razorback4417/squirtle"><b>View Repo</b></a></p>
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> Web application built from scratch using the MERN stack to
+                      coordinate ride sharing between university students, resulting in a reduction in
+                      rideshare costs.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> React, Node.js, Express, MongoDB (MERN Stack), Typescript
+              </div>
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="project-box project1">
-        <a target="_blank" href="https://drive.google.com/drive/folders/1mCW9YNv_2FhbpajidJGL7r5jaJHQOfcc?usp=sharing">
-          <h2>FitTogether</h2>
-          <div class="project-image">
-            <img src="../static/images/az/fittogether.png" alt="Fittogether">
+
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/az/surefashion.png" alt="tinyCV.co" class="project-image">
+            <h3 class="project-title">Surefashion</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://drive.google.com/drive/folders/1MPnytnxjLoYHDBbDw1OWOFbDvJUn4Kwa?usp=sharing"><b>View
+                          Project</b></a>
+                    </p>
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://github.com/smalex-z/SureFashion"><b>View Repo</b></a></p>
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> Responsive Django web-application using HTML/CSS, Bootstrap, and
+                      JavaScript designed to allow users to curate wardrobes, explore outfits, and experiment with
+                      styles.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> Django, Google Cloud Auth & API, HTML, CSS, Bootstrap, JavaScript, SQLite
+              </div>
+            </div>
           </div>
-          <div class="project-details">
-            Cross-platform fitness mobile app utilizing the spaCy machine learning model to match like-minded individuals based on their fitness preferences and foster inclusivity.
+
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/az/fittogether.png" alt="tinyCV.co" class="project-image">
+            <h3 class="project-title">Fittogether</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://drive.google.com/drive/folders/1mCW9YNv_2FhbpajidJGL7r5jaJHQOfcc?usp=sharing"><b>View
+                          Project</b></a>
+                    </p>
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://github.com/pranavsankar2/fit-together"><b>View Repo</b></a></p>
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> Cross-platform fitness mobile app utilizing the spaCy machine
+                      learning model to match like-minded individuals based on their fitness preferences and foster
+                      inclusivity.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> React Native, Google Firebase, Android Studio, Typescript, Pytorch, Figma
+              </div>
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="project-box project1">
-        <a target="_blank" href="{% url 'project' %}">
-          <h2>Cooking 101</h2>
-          <div class="project-image">
-            <img src="../static/images/base/comingsoon.png" alt="Project 1">
+
+          <!-- PROJECT CARD -->
+          <div class="project-card">
+            <img src="../static/images/base/comingsoon.png" alt="Cooking101" class="project-image">
+            <h3 class="project-title">Cooking101</h3>
+            <div class="card-hover-content">
+              <div class="row project-description">
+                <div class="col">
+                  <div class="row project-links mb-3">
+                    <p class="col link-icon">🔗<a class="grey-link" href=""><b>View
+                          Project</b></a>
+                    </p>
+                    <p class="col link-icon">🔗<a class="grey-link"
+                        href="https://github.com/smalex-z/cooking101"><b>View Repo</b></a></p>
+                  </div>
+                  <div class="row">
+                    <p class="project-description"> Cooking 101 is an app dedicated to becoming your personalized
+                      cookbook filled with recipes bridging the gap between accessible ingredients and deliciousness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row project-description">
+                <b>Built with:</b> React Native, Google Firebase, Android Studio, Typescript, Figma
+              </div>
+            </div>
           </div>
-          <div class="project-details">
-            Cooking 101 is an app dedicated to becoming your personalized cookbook filled with recipes bridging the gap between accessible ingredients and deliciousness. 
-            (In Progress)
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+        </div>
+
     </section>
     <section id="contact">
       <div class="contact-div">
@@ -146,39 +322,43 @@
           <div class="content">
             <div class="left-side">
               <div class="address details">
-                <div class="topic">Address</div>
-                <div class="text-one">9705 Royal Crest Cir</div>
-                <div class="text-two">Frederick, Maryland</div>
+                <div class="topic">Locations:</div>
+                <div class="text-one">Frederick, Maryland (Home)</div>
+                <div class="text-one">Los Angeles, California (School)</div>
+                <div class="text-one">Boston, Massachusetts (Work)</div>
               </div>
               <div class="phone details">
-                <div class="topic">Phone</div>
+                <div class="topic">Phone:</div>
                 <div class="text-one">+1 (240) 751-7540</div>
               </div>
               <div class="email details">
-                <div class="topic">Email</div>
-                <div class="text-one">alexzheng2004@gmail.com</div>
+                <div class="topic">Email:</div>
+                <div class="text-one">Buisness: alex.htzheng@gmail.com </div>
+                <div class="text-one">Personal: alexzheng2004@gmail.com</div>
               </div>
             </div>
             <div class="right-side">
               <div class="topic-text">Send me a message</div>
-              <p>If you have any work from me or any types of queries related to my work, you can send me message from here. It's my pleasure to help you.</p>
-            <form action="#">
-              <div class="input-box">
-                <input type="text" placeholder="Enter your name">
-              </div>
-              <div class="input-box">
-                <input type="text" placeholder="Enter your subject-line">
-              </div>
-              <div class="input-box message-box">
-                <textarea name="text" rows="14" cols="10" wrap="soft" placeholder="Message:"></textarea>
-              </div>
-              <a target="_blank" href="mailto:alexzheng2004@gmail.com?subject=Contact%20Form&body=Name:%20%0D%0A%0D%0AEmail:%20%0D%0A%0D%0AMessage:%20">
-                <div class="button">
-                  <input type="button" value="Send Now">
+              <p>If you have any work from me or any types of queries related to my work, you can send me message from
+                here. It's my pleasure to help you.</p>
+              <form action="#">
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your name">
                 </div>
-              </a>
-            </form>
-          </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your subject-line">
+                </div>
+                <div class="input-box message-box">
+                  <textarea name="text" rows="14" cols="10" wrap="soft" placeholder="Message:"></textarea>
+                </div>
+                <a target="_blank"
+                  href="mailto:alex.htzheng@gmail.com?subject=Contact%20Form&body=Name:%20%0D%0A%0D%0AEmail:%20%0D%0A%0D%0AMessage:%20">
+                  <div class="button">
+                    <input type="button" value="Send Now">
+                  </div>
+                </a>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -189,28 +369,25 @@
 
   <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-       <div class="modal-content">
-          <div class="modal-header">
-             <h5 class="modal-title" id="resumeModalLabel">Resume Preview</h5>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resumeModalLabel">Resume Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your resume content here -->
           <div class="modal-body">
-             <!-- Add your resume content here -->
-             <div class="modal-body">
-              <iframe 
-                src="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" 
-                width="100%" 
-                height="600px" 
-                style="border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); outline: none;"
-              ></iframe>
-           </div>
+            <iframe src="{% static 'images/az/Alex_Zheng_Resume.pdf' %}" width="100%" height="100%"
+              style="border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); outline: none;"></iframe>
           </div>
-          <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-             <!-- Add any additional buttons or functionality here -->
-          </div>
-       </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- Add any additional buttons or functionality here -->
+        </div>
+      </div>
     </div>
- </div>
+  </div>
 </body>
+
 </html>
