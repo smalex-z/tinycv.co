@@ -10,6 +10,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    justify-content: center;
+    display: flex;
+    font-family: "Poppins", sans-serif;
 }
 
 .container{
@@ -19,7 +22,9 @@
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin: 0px;
+  max-width: none;
 }
+
 .container .content{
   display: flex;
   align-items: center;
@@ -48,30 +53,37 @@
   background: #afafb6;
 }
 .content .left-side .details{
-  margin: 14px;
+  margin: 1rem;
   text-align: center;
 }
 .content .left-side .details i{
-  font-size: 30px;
+  font-size: 2rem;
   color: #3e2093;
   margin-bottom: 10px;
 }
 .content .left-side .details .topic{
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 .content .left-side .details .text-one,
 .content .left-side .details .text-two{
-  font-size: 14px;
+  font-size: .8rem;
   color: #afafb6;
 }
 .container .content .right-side{
   width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 7.5%;
   margin-right: 7.5%;
 }
+.container .content .right-side form{
+  height: auto;
+}
 .content .right-side .topic-text{
-  font-size: 23px;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #3e2093;
 }
@@ -83,9 +95,9 @@
     color: #000000;
   }
 .right-side .input-box{
-  height: 50px;
+  height: 2.5rem;
   width: 100%;
-  margin: 12px 0;
+  margin: 1vh 0;
 }
 .right-side .input-box input,
 .right-side .input-box textarea{
@@ -93,14 +105,15 @@
   width: 100%;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 1rem;
   background: #F0F1F8;
   border-radius: 6px;
-  padding: 0 15px;
+  padding: 0 .5rem;
   resize: none;
 }
 .right-side .message-box{
   min-height: 150px;
+  height: 7.5rem;
 }
 .right-side .input-box textarea{
   padding-top: 6px;
@@ -111,14 +124,17 @@
 }
 .right-side .button input[type="button"]{
   color: #fff;
-  font-size: 18px;
+  font-size: 1.2rem;
   outline: none;
   border: none;
+  margin-top : 1vh;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: .75vh;
   background: #3e2093;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 8vw;
+  height: 5vh;
 }
 .button input[type="button"]:hover{
   background: #5029bc;
