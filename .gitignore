@@ -1,4 +1,6 @@
 threepointfive/__pycache__
 db.sqlite3
 __pycache__/
+/venv
+/website/migrations
 *.pyc
